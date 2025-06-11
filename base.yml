@@ -1,0 +1,101 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d/%m/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
+  - trigger: "=abn"
+    replace: "ABNORMAL for f/u"
+
+  - trigger: "=nd"
+    replace: "nad sp"
+
+  - trigger: "=ng"
+    replace: "neg sp"
+
+  - trigger: "=dwpt"
+    replace: "d/w pt {{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d/%m/%Y"
+
+  - trigger: "=spec"
+    replace: "under specialist care sp"
+
+  - trigger: "=resd"
+    replace: "results discussed" 
+
+  - trigger: "=phonecons"
+    replace: "phone consult - confirmed full name, DOB, address"
+
+  - trigger: "=bbok"
+    replace: "sp ok to bb"
+
+  - trigger: "=addkey"
+    replace: "  - trigger: \n    replace: "
+
+  - trigger: "=elecsign"
+    replace: "Signed electronically by Dr Shashi Ponraja on {{thedate}} at {{thetime}}"
+    vars:
+      - name: thedate
+        type: date
+        params:
+          format: "%d %b %Y"
+      - name: thetime
+        type: date
+        params:
+          format: "%I:%M %p"
+
+  - trigger: "=ahpnum"
+    replace: "MED 000 177 9378"
+
+  - trigger: "=cap<2"
+    replace: "central, peripheral cap refill time <2s"
+
+  - trigger: "=gaitgud"
+    replace: "standard, heel-walk, toe-walk, heel-toe walk gait normal"
+
+  - trigger: "=cbdcons"
+    replace: "suitable for medicinal marijuana trial \n pt advised \n- will proceed with tga application \n- if approved, for prescription on trial basis\n- advised risk of side effects, potential benefits not guaranteed as still considered experimental therapy\nconsent form completed\nbook for f/u 2/52 after commencing rx"
+
+  - trigger: "=chlamdx"
+    replace: "azithromycin 1g PO stat\nadvised result notifiable to public health\nno sex for 1/52 post treatment"
+
+  - trigger: "=vgastromx"
+    replace: "liquid diet for 12-18h, then dry solid foods\navoid fresh fruit, vegetables, dairy, meat, spicy food as may aggravate sx"
+    
+
