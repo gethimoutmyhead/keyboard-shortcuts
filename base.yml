@@ -16,15 +16,6 @@ matches:
 
   # But matches can also be dynamic:
 
-  # Print the current date
-  - trigger: ":date"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%d/%m/%Y"
-
   # Print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
@@ -100,3 +91,49 @@ matches:
     
   - trigger: "=fullskincheck"
     replace: "verbal consent for skin examination. chaperoned by clin assist marlie w thanks\nlesions of concern to pt -\npt undressed to undergarments. full assessment of skin excluding areas under undergarments\nlesions of clinical concern -\nmx\n-routine sun protection\n-vit b3 for sun-damaged skin\n-f/u at " 
+
+  - trigger: "=cbdinit"
+    replace: "## Issues \n
+
+## Mx.\n
+Medicinal Cannabis trial eligibility -\n
+Medicinal Cannabis contraindications -\n
+Medicinal Cannabis Treatment Plan:\n
+
+Counselled on legal restrictions with products containing THC \n
+Counselled on TGA, AHPRA Regulations\n
+Counselled on pharmacology of medicinal cannabis\n
+
+## Hx\n
+
+## Psychiatric history\n
+Prior formal dx. - 
+prior dx. of psychosis/mania/schizophrenia/bipolar disorder - \n
+prior inpatient mental health admissions - \n
+stimulant medication for ADHD or other indications - \n
+\n
+## Cannabis Use History\n
+\n
+## Other Substance Use History\n
+etoh - \n
+nicotine - \n
+current recreational drug use - \n
+current performance enhancing drug use - \n
+### past usage \n
+psychedelics - \n
+stimulants - \n
+depressants - \n
+
+\n
+## Social History\n
+### Living situation\n
+People in household - \n
+Children - \n
+Safe storage for high risk medication - \n
+\n
+### Modes of Transportation\n
+\n
+## Previous prescribing and medical history\n
+ScriptCheckWA - \n
+MyHealthRecord - \n
+"
