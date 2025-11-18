@@ -92,6 +92,30 @@ matches:
   - trigger: "=fullskincheck"
     replace: "verbal consent for skin examination. chaperoned by clin assist marlie w thanks\nlesions of concern to pt -\npt undressed to undergarments. full assessment of skin excluding areas under undergarments\nlesions of clinical concern -\nmx\n-routine sun protection\n-vit b3 for sun-damaged skin\n-f/u at " 
 
+  - trigger: "=cbdprecons"
+    replace: "pre-consultation check\n
+              ## ScriptcheckWA review\n
+              alerts - \n
+              prior scripts - \n
+
+              ## MyHealthRecord \n
+              mental health history - \n
+              health summaries - \n
+              specialist letters - \n
+              discharge letters - \n
+              medication review - \n
+
+              ## on-boarding form\n
+              potential treatment goals -\n
+              prior cannabis use - \n
+"
+
+  - trigger: "=cbdbbtit"
+    replace: "phone consult - confirmed full name, DOB, address, >6mins\n
+              ## treatment review\n\n
+              ## Management
+    "
+
   - trigger: "=cbdinit"
     replace: "## Issues \n
 
